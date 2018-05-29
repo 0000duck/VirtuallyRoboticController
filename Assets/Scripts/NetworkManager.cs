@@ -34,8 +34,72 @@ public class NetworkManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetKeyDown(KeyCode.Keypad1)){
+			UI_Manager.instance.leftLever.value = -1;
+		}
+		if(Input.GetKeyDown(KeyCode.Keypad4)){
+			UI_Manager.instance.leftLever.value = 0;
+		}
+		if(Input.GetKeyDown(KeyCode.Keypad7)){
+			UI_Manager.instance.leftLever.value = 1;
+		}
+		if(Input.GetKeyDown(KeyCode.Keypad3)){
+			UI_Manager.instance.rightLever.value = -1;
+		}
+		if(Input.GetKeyDown(KeyCode.Keypad6)){
+			UI_Manager.instance.rightLever.value = 0;
+		}
+		if(Input.GetKeyDown(KeyCode.Keypad9)){
+			UI_Manager.instance.rightLever.value = 1;
+		}
+
+		if(Input.GetKeyDown(KeyCode.LeftArrow)){
+			UI_Manager.instance.leftLever.value = -1;
+			UI_Manager.instance.rightLever.value = 1;
+		}
+		if(Input.GetKeyDown(KeyCode.UpArrow)){
+			UI_Manager.instance.leftLever.value = 1;
+			UI_Manager.instance.rightLever.value = 1;
+		}
+		if(Input.GetKeyDown(KeyCode.RightArrow)){
+			UI_Manager.instance.leftLever.value = 1;
+			UI_Manager.instance.rightLever.value = -1;
+		}
+		if(Input.GetKeyDown(KeyCode.DownArrow)){
+			UI_Manager.instance.leftLever.value = -1;
+			UI_Manager.instance.rightLever.value = -1;
+		}
+		if(Input.GetKeyDown(KeyCode.Space)){
+			UI_Manager.instance.leftLever.value = 0;
+			UI_Manager.instance.rightLever.value = 0;
+		}
 	}
+
+	void InstantConnect(){
+		try{
+			IPAddress ipaddress = IPAddress.Parse(ip);
+			IPEndPoint ipendpoint = new IPEndPoint(ipaddress, port);
+			sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+			sender.Connect(ipendpoint);
+			AddMessage("Connected", Color.white);
+			connected = true;
+			UI_Manager.instance.connectButton.interactable = false;
+			UI_Manager.instance.disconnectButton.interactable = true;
+			UI_Manager.instance.packetBox.AddMessage("Connected", Color.green);
+		}
+		catch(Exception e){
+			AddMessage("Connection Failed: " + e.Message, Color.red);
+		}
+	}
+
+	//public void Connect(){
+	//	IPAddress ipaddress = IPAddress.Parse (ip);
+	//	IPEndPoint ipendpoint = new IPEndPoint (ipaddress, port);
+	//	sender = new Socket (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+	//	sender.Connect (ipendpoint);
+	//	Debug.Log ("Connected to tank @ " + sender.RemoteEndPoint.ToString ());
+		//connected = true;
+	//}
 
 	public void Connect(){
 		AddMessage("Attempting to connect to " + ip + ":" + port, Color.white);
@@ -98,9 +162,21 @@ public class NetworkManager : MonoBehaviour {
 
 	IEnumerator NetworkTick(){
 		while(true){
-			if(sendPackets){
-				Send("L" + UI_Manager.instance.leftLever.value);
-				Send("R" + UI_Manager.instance.rightLever.value);
+			if(sendPackets && connected){
+				float left = UI_Manager.instance.leftLever.value;
+				float right = UI_Manager.instance.rightLever.value;
+
+				if (left < 0) {
+					Send("lb" + Mathf.RoundToInt(Mathf.Abs(left) * 100));
+				} else {
+					Send("lf" + Mathf.RoundToInt(Mathf.Abs(left) * 100));
+				}
+
+				if (right < 0) {
+					Send("rb" + Mathf.RoundToInt(Mathf.Abs(right) * 100));
+				} else {
+					Send("rf" + Mathf.RoundToInt(Mathf.Abs(right) * 100));
+				}
 			}
 			yield return new WaitForSeconds(tickRate);
 		}

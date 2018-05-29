@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 253.85, y: -403.84}
+  m_AnchoredPosition: {x: 250.65001, y: -342.83978}
   m_SizeDelta: {x: -846.9, y: -807.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &19606193
@@ -220,7 +220,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\u200B"
+  m_text: "192.168.0.21\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
@@ -287,10 +287,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 53016348}
-    characterCount: 1
+    characterCount: 13
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56088040}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: 
@@ -448,11 +448,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -539,7 +539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0.000015258789}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &176756707
@@ -780,7 +780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -621.34985, y: -403.84103}
+  m_AnchoredPosition: {x: -624.54987, y: -342.84082}
   m_SizeDelta: {x: 677.3, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283709582
@@ -1425,7 +1425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 875.2, y: -0.00024414}
+  m_AnchoredPosition: {x: 872, y: 61}
   m_SizeDelta: {x: 169.6, y: 1007.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &489923968
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1195810564}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999998
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3507,7 +3507,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: 192.168.0.21
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -4018,7 +4018,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11479464, guid: d2b6f4719f2a1e34f9bdeb0cae87bddd, type: 2}
       propertyPath: _url
-      value: www.google.com
+      value: 192.168.0.21/html
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2b6f4719f2a1e34f9bdeb0cae87bddd, type: 2}
@@ -4111,7 +4111,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\u200B"
+  m_text: "50007\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
@@ -4178,7 +4178,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1353156666}
-    characterCount: 1
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: 50007
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -6081,7 +6081,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 844103261}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.9999997
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6148,11 +6148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e823611f7838c5548b5e6d9da1b74ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ip: 192.168.1.1
-  port: 5007
+  ip: 192.168.0.21
+  port: 50007
   connected: 0
   tickRate: 0.2
-  sendPackets: 0
+  sendPackets: 1
 --- !u!4 &1938619913
 Transform:
   m_ObjectHideFlags: 0
@@ -6623,7 +6623,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2087581501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: 
@@ -6711,11 +6711,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
